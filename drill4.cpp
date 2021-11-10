@@ -156,24 +156,24 @@ első feladat vége */
 			adatok.push_back(valtas(szam3,egyseg));
 			sort(adatok);
 			
-			if(szam3<min){ //legnagyobb legkisseb eldontése
-			min=szam3;
+			if(valtas(szam3,egyseg)<min){ //legnagyobb legkisseb eldontése
+			min=valtas(szam3,egyseg);
 			}
 			
-			if(szam3>max){
-			max=szam3;}
+			if(valtas(szam3,egyseg)>max){
+			max=valtas(szam3,egyseg);}
 		
-		cout << "The largest so far : " << max << "\n" << "The smallest so far: " << min << "\n" << "The number of values: " << ertekek_szama++ << "\n";
+		cout << "The largest so far : " << max << "\n" << "The smallest so far: " << min << "\n" << "The number of values: " << ertekek_szama << "\n";
 		cout << "The sum of values: " << osszes_ertek << " m" << "\n"  << "Elements of vector in order: " << endl;
 		
 		
 		
 		}
-		
-	}
-	for(double a:adatok){
+		for(double a:adatok){
 			cout << a << ","; 
 		}
+		cout << "\n";
+	}
 	
 return 0;
 }
